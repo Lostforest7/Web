@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            width: 400px;
+            height: 200px;
+            font-size: 700%;
+            color: rgb(195, 195, 195);
+            margin-top: 23%;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    const div=document.querySelector("div")
+    function time(){
+        const date=new Date
+        return `${date.toLocaleTimeString()}`
+    }
+    div.innerHTML=time()
+    setInterval(function(){
+        div.innerHTML=time()
+    },1000)
+</script>
+</html>
